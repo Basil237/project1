@@ -1,0 +1,14 @@
+START
+SET random_number = RANDOM(1, 100)
+WHILE true
+    INPUT guess
+    IF guess > random_number THEN
+        DISPLAY "Too high"
+    ELSE IF guess < random_number THEN
+        DISPLAY "Too low"
+    ELSE
+        DISPLAY "Correct! You guessed the number."
+        BREAK
+    ENDIF
+ENDWHILE
+END

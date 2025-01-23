@@ -1,0 +1,27 @@
+START
+SET balance = 1000
+WHILE true
+    DISPLAY "1. Check Balance 2. Withdraw 3. Deposit 4. Exit"
+    INPUT choice
+    IF choice = 1 THEN
+        DISPLAY balance
+    ELSE IF choice = 2 THEN
+        INPUT amount
+        IF amount <= balance THEN
+            balance = balance - amount
+            DISPLAY "Withdrawal successful"
+        ELSE
+            DISPLAY "Insufficient balance"
+        ENDIF
+    ELSE IF choice = 3 THEN
+        INPUT amount
+        balance = balance + amount
+        DISPLAY "Deposit successful"
+    ELSE IF choice = 4 THEN
+        DISPLAY "Exiting system"
+        BREAK
+    ELSE
+        DISPLAY "Invalid option"
+    ENDIF
+ENDWHILE
+END
